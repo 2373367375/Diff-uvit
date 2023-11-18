@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="xidian@10.193.119.157:22" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="xd132@10.193.200.169:22">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="xd132@10.193.215.83:22">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="xd132@10.193.221.104:22">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/tmp/pycharm_project_137" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="xd132@10.193.221.104:22 (2)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/tmp/pycharm_project_915" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="xd132@10.193.58.148:22">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="xd132@s1.s100.vip:3254">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="xidian@10.193.119.157:22">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/media/xidian/55bc9b72-e29e-4dfa-b83e-0fbd0d5a7677/xd132/HJ/change_detection/AAAI" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="xidian@10.193.119.157:22 (2)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/media/xidian/55bc9b72-e29e-4dfa-b83e-0fbd0d5a7677/xd132/HJ/change_detection/AAAI" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="xidian@10.193.119.157:22 (3)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/media/xidian/55bc9b72-e29e-4dfa-b83e-0fbd0d5a7677/xd132/HJ/change_detection/AAAI" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="xidian@10.193.119.157:22 (4)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/media/xidian/55bc9b72-e29e-4dfa-b83e-0fbd0d5a7677/xd132/HJ/change_detection/AAAI" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="xidian@10.193.119.157:22 (5)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/media/xidian/55bc9b72-e29e-4dfa-b83e-0fbd0d5a7677/xd132/HJ/change_detection/AAAI" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="xidian@10.193.119.157:22 (6)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/media/xidian/55bc9b72-e29e-4dfa-b83e-0fbd0d5a7677/xd132/HJ/change_detection/AAAI" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>
