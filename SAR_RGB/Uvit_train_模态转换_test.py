@@ -412,7 +412,7 @@ class SR3():
                     [x_start_SAR_0, feature_SAR_0, x_start_RGB_0, feature_RGB_0], [feature_SAR_1000, feature_RGB_1000],\
                     [feature_SAR_2000, feature_RGB_2000] = self.test(RGB, SAR)
 
-                    if step==0:
+                    if step == 0:
                         RGB_All_f_step0_0 = feature_RGB_0[0]
                         SAR_All_f_step0_0 = feature_SAR_0[0]
                         RGB_All_f_step0_1 = feature_RGB_0[1]
@@ -630,45 +630,47 @@ class SR3():
                 RGB_f_step2000_6 = Patches_to_image(RGB_f_step2000_6)
                 SAR_f_step2000_6 = Patches_to_image(SAR_f_step2000_6)
 
-                sio.savemat('./mat_file/2000_1000_0_layer_f/RGB_x_0.mat', {"RGB_x_0": RGB_x_0.cpu().numpy()})
-                sio.savemat('./mat_file/2000_1000_0_layer_f/SAR_x_0.mat', {"SAR_x_0": SAR_x_0.cpu().numpy()})
-                sio.savemat('./mat_file/2000_1000_0_layer_f/RGB_f_step0_0.mat', {"RGB_f_step0_0": RGB_f_step0_0.cpu().numpy()})
-                sio.savemat('./mat_file/2000_1000_0_layer_f/SAR_f_step0_0.mat', {"SAR_f_step0_0": SAR_f_step0_0.cpu().numpy()})
-                sio.savemat('./mat_file/2000_1000_0_layer_f/RGB_f_step0_1.mat', {"RGB_f_step0_1": RGB_f_step0_1.cpu().numpy()})
-                sio.savemat('./mat_file/2000_1000_0_layer_f/SAR_f_step0_1.mat', {"SAR_f_step0_1": SAR_f_step0_1.cpu().numpy()})
-                sio.savemat('./mat_file/2000_1000_0_layer_f/RGB_f_step0_2.mat', {"RGB_f_step0_2": RGB_f_step0_2.cpu().numpy()})
-                sio.savemat('./mat_file/2000_1000_0_layer_f/SAR_f_step0_2.mat', {"SAR_f_step0_2": SAR_f_step0_2.cpu().numpy()})
-                sio.savemat('./mat_file/2000_1000_0_layer_f/RGB_f_step0_3.mat', {"RGB_f_step0_3": RGB_f_step0_3.cpu().numpy()})
-                sio.savemat('./mat_file/2000_1000_0_layer_f/SAR_f_step0_3.mat', {"SAR_f_step0_3": SAR_f_step0_3.cpu().numpy()})
-                sio.savemat('./mat_file/2000_1000_0_layer_f/RGB_f_step0_4.mat', {"RGB_f_step0_4": RGB_f_step0_4.cpu().numpy()})
-                sio.savemat('./mat_file/2000_1000_0_layer_f/SAR_f_step0_4.mat', {"SAR_f_step0_4": SAR_f_step0_4.cpu().numpy()})
+
+                path = './mat_file/feature_3/'
+                sio.savemat(path+'RGB_x_0.mat', {"RGB_x_0": RGB_x_0.cpu().numpy()})
+                sio.savemat(path+'SAR_x_0.mat', {"SAR_x_0": SAR_x_0.cpu().numpy()})
+                sio.savemat(path+'RGB_f_step0_0.mat', {"RGB_f_step0_0": RGB_f_step0_0.cpu().numpy()})
+                sio.savemat(path+'SAR_f_step0_0.mat', {"SAR_f_step0_0": SAR_f_step0_0.cpu().numpy()})
+                sio.savemat(path+'RGB_f_step0_1.mat', {"RGB_f_step0_1": RGB_f_step0_1.cpu().numpy()})
+                sio.savemat(path+'SAR_f_step0_1.mat', {"SAR_f_step0_1": SAR_f_step0_1.cpu().numpy()})
+                sio.savemat(path+'RGB_f_step0_2.mat', {"RGB_f_step0_2": RGB_f_step0_2.cpu().numpy()})
+                sio.savemat(path+'SAR_f_step0_2.mat', {"SAR_f_step0_2": SAR_f_step0_2.cpu().numpy()})
+                sio.savemat(path+'RGB_f_step0_3.mat', {"RGB_f_step0_3": RGB_f_step0_3.cpu().numpy()})
+                sio.savemat(path+'SAR_f_step0_3.mat', {"SAR_f_step0_3": SAR_f_step0_3.cpu().numpy()})
+                sio.savemat(path+'RGB_f_step0_4.mat', {"RGB_f_step0_4": RGB_f_step0_4.cpu().numpy()})
+                sio.savemat(path+'SAR_f_step0_4.mat', {"SAR_f_step0_4": SAR_f_step0_4.cpu().numpy()})
 
 
-                sio.savemat('./mat_file/2000_1000_0_layer_f/RGB_f_step1000_0.mat', {"RGB_f_step1000_0": RGB_f_step1000_0.cpu().numpy()})
-                sio.savemat('./mat_file/2000_1000_0_layer_f/SAR_f_step1000_0.mat', {"SAR_f_step1000_0": SAR_f_step1000_0.cpu().numpy()})
-                sio.savemat('./mat_file/2000_1000_0_layer_f/RGB_f_step1000_1.mat', {"RGB_f_step1000_1": RGB_f_step1000_1.cpu().numpy()})
-                sio.savemat('./mat_file/2000_1000_0_layer_f/SAR_f_step1000_1.mat', {"SAR_f_step1000_1": SAR_f_step1000_1.cpu().numpy()})
-                sio.savemat('./mat_file/2000_1000_0_layer_f/RGB_f_step1000_2.mat', {"RGB_f_step1000_2": RGB_f_step1000_2.cpu().numpy()})
-                sio.savemat('./mat_file/2000_1000_0_layer_f/SAR_f_step1000_2.mat', {"SAR_f_step1000_2": SAR_f_step1000_2.cpu().numpy()})
-                sio.savemat('./mat_file/2000_1000_0_layer_f/RGB_f_step1000_3.mat', {"RGB_f_step1000_3": RGB_f_step1000_3.cpu().numpy()})
-                sio.savemat('./mat_file/2000_1000_0_layer_f/SAR_f_step1000_3.mat', {"SAR_f_step1000_3": SAR_f_step1000_3.cpu().numpy()})
-                sio.savemat('./mat_file/2000_1000_0_layer_f/RGB_f_step1000_4.mat', {"RGB_f_step1000_4": RGB_f_step1000_4.cpu().numpy()})
-                sio.savemat('./mat_file/2000_1000_0_layer_f/SAR_f_step1000_4.mat', {"SAR_f_step1000_4": SAR_f_step1000_4.cpu().numpy()})
-                sio.savemat('./mat_file/2000_1000_0_layer_f/RGB_f_step1000_6.mat', {"RGB_f_step1000_6": RGB_f_step1000_6.cpu().numpy()})
-                sio.savemat('./mat_file/2000_1000_0_layer_f/SAR_f_step1000_6.mat', {"SAR_f_step1000_6": SAR_f_step1000_6.cpu().numpy()})
+                sio.savemat(path+'RGB_f_step1000_0.mat', {"RGB_f_step1000_0": RGB_f_step1000_0.cpu().numpy()})
+                sio.savemat(path+'SAR_f_step1000_0.mat', {"SAR_f_step1000_0": SAR_f_step1000_0.cpu().numpy()})
+                sio.savemat(path+'RGB_f_step1000_1.mat', {"RGB_f_step1000_1": RGB_f_step1000_1.cpu().numpy()})
+                sio.savemat(path+'SAR_f_step1000_1.mat', {"SAR_f_step1000_1": SAR_f_step1000_1.cpu().numpy()})
+                sio.savemat(path+'RGB_f_step1000_2.mat', {"RGB_f_step1000_2": RGB_f_step1000_2.cpu().numpy()})
+                sio.savemat(path+'SAR_f_step1000_2.mat', {"SAR_f_step1000_2": SAR_f_step1000_2.cpu().numpy()})
+                sio.savemat(path+'RGB_f_step1000_3.mat', {"RGB_f_step1000_3": RGB_f_step1000_3.cpu().numpy()})
+                sio.savemat(path+'SAR_f_step1000_3.mat', {"SAR_f_step1000_3": SAR_f_step1000_3.cpu().numpy()})
+                sio.savemat(path+'RGB_f_step1000_4.mat', {"RGB_f_step1000_4": RGB_f_step1000_4.cpu().numpy()})
+                sio.savemat(path+'SAR_f_step1000_4.mat', {"SAR_f_step1000_4": SAR_f_step1000_4.cpu().numpy()})
+                sio.savemat(path+'RGB_f_step1000_6.mat', {"RGB_f_step1000_6": RGB_f_step1000_6.cpu().numpy()})
+                sio.savemat(path+'SAR_f_step1000_6.mat', {"SAR_f_step1000_6": SAR_f_step1000_6.cpu().numpy()})
 
-                sio.savemat('./mat_file/2000_1000_0_layer_f/RGB_f_step2000_0.mat', {"RGB_f_step2000_0": RGB_f_step2000_0.cpu().numpy()})
-                sio.savemat('./mat_file/2000_1000_0_layer_f/SAR_f_step2000_0.mat', {"SAR_f_step2000_0": SAR_f_step2000_0.cpu().numpy()})
-                sio.savemat('./mat_file/2000_1000_0_layer_f/RGB_f_step2000_1.mat', {"RGB_f_step2000_1": RGB_f_step2000_1.cpu().numpy()})
-                sio.savemat('./mat_file/2000_1000_0_layer_f/SAR_f_step2000_1.mat', {"SAR_f_step2000_1": SAR_f_step2000_1.cpu().numpy()})
-                sio.savemat('./mat_file/2000_1000_0_layer_f/RGB_f_step2000_2.mat', {"RGB_f_step2000_2": RGB_f_step2000_2.cpu().numpy()})
-                sio.savemat('./mat_file/2000_1000_0_layer_f/SAR_f_step2000_2.mat', {"SAR_f_step2000_2": SAR_f_step2000_2.cpu().numpy()})
-                sio.savemat('./mat_file/2000_1000_0_layer_f/RGB_f_step2000_3.mat', {"RGB_f_step2000_3": RGB_f_step2000_3.cpu().numpy()})
-                sio.savemat('./mat_file/2000_1000_0_layer_f/SAR_f_step2000_3.mat', {"SAR_f_step2000_3": SAR_f_step2000_3.cpu().numpy()})
-                sio.savemat('./mat_file/2000_1000_0_layer_f/RGB_f_step2000_4.mat', {"RGB_f_step2000_4": RGB_f_step2000_4.cpu().numpy()})
-                sio.savemat('./mat_file/2000_1000_0_layer_f/SAR_f_step2000_4.mat', {"SAR_f_step2000_4": SAR_f_step2000_4.cpu().numpy()})
-                sio.savemat('./mat_file/2000_1000_0_layer_f/RGB_f_step2000_6.mat', {"RGB_f_step2000_6": RGB_f_step2000_6.cpu().numpy()})
-                sio.savemat('./mat_file/2000_1000_0_layer_f/SAR_f_step2000_6.mat', {"SAR_f_step2000_6": SAR_f_step2000_6.cpu().numpy()})
+                sio.savemat(path+'RGB_f_step2000_0.mat', {"RGB_f_step2000_0": RGB_f_step2000_0.cpu().numpy()})
+                sio.savemat(path+'SAR_f_step2000_0.mat', {"SAR_f_step2000_0": SAR_f_step2000_0.cpu().numpy()})
+                sio.savemat(path+'RGB_f_step2000_1.mat', {"RGB_f_step2000_1": RGB_f_step2000_1.cpu().numpy()})
+                sio.savemat(path+'SAR_f_step2000_1.mat', {"SAR_f_step2000_1": SAR_f_step2000_1.cpu().numpy()})
+                sio.savemat(path+'RGB_f_step2000_2.mat', {"RGB_f_step2000_2": RGB_f_step2000_2.cpu().numpy()})
+                sio.savemat(path+'SAR_f_step2000_2.mat', {"SAR_f_step2000_2": SAR_f_step2000_2.cpu().numpy()})
+                sio.savemat(path+'RGB_f_step2000_3.mat', {"RGB_f_step2000_3": RGB_f_step2000_3.cpu().numpy()})
+                sio.savemat(path+'SAR_f_step2000_3.mat', {"SAR_f_step2000_3": SAR_f_step2000_3.cpu().numpy()})
+                sio.savemat(path+'RGB_f_step2000_4.mat', {"RGB_f_step2000_4": RGB_f_step2000_4.cpu().numpy()})
+                sio.savemat(path+'SAR_f_step2000_4.mat', {"SAR_f_step2000_4": SAR_f_step2000_4.cpu().numpy()})
+                sio.savemat(path+'RGB_f_step2000_6.mat', {"RGB_f_step2000_6": RGB_f_step2000_6.cpu().numpy()})
+                sio.savemat(path+'SAR_f_step2000_6.mat', {"SAR_f_step2000_6": SAR_f_step2000_6.cpu().numpy()})
 
     def test(self, RGB, SAR):
 
@@ -704,7 +706,7 @@ if __name__ == "__main__":
     batch_size = 4
     LR_size = 32
     img_size = 128
-    root = '../data/data_1_RGB_SAR/'
+    root = '/media/xidian/55bc9b72-e29e-4dfa-b83e-0fbd0d5a7677/xd132/HJ/change_detection/AAAI/data/data_1_RGB_SAR/'
 
     train_data = Dataset(root+"RGB_Norm.mat", root+"SAR_Norm.mat", root+"GT.mat",data='Data_1', mode='train', channel=3)
     train_dataloader = DataLoader(train_data, batch_size=batch_size, shuffle=True, num_workers=4, pin_memory=True)
@@ -712,15 +714,16 @@ if __name__ == "__main__":
     test_dataloader = DataLoader(test_data, batch_size=1, shuffle=False, num_workers=4, pin_memory=True)
 
     cuda = torch.cuda.is_available()
-    device = torch.device("cuda:0" if cuda else "cpu")
+    device = torch.device("cuda:1" if cuda else "cpu")
     schedule_opt = {'schedule': 'linear', 'n_timestep': 2000, 'linear_start': 1e-4, 'linear_end': 0.002}
 
     sr3 = SR3(device, img_size=img_size, LR_size=LR_size, loss_type='l1',
               dataloader=train_dataloader, testloader=test_dataloader, schedule_opt=schedule_opt,
               save_path='./model/大图生成/',
-              load_path='../TS_model/Data_1_RGB_SAR/feature_5/model_epoch-133.pt', load=True,
+              load_path='/media/xidian/55bc9b72-e29e-4dfa-b83e-0fbd0d5a7677/xd132/HJ/change_detection/AAAI_2/SAR_RGB/model/feature_3/model_epoch-459.pt', load=True,
               inner_channel=64,
               norm_groups=16, channel_mults=(1, 2, 2, 2), dropout=0, res_blocks=2, lr=1e-4, distributed=False)
+
     sr3.train(epoch=10000, verbose=1)
 
 

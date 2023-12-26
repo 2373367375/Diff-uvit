@@ -5,6 +5,8 @@ import einops
 import torch.utils.checkpoint
 import torch.nn.functional
 import torch
+
+
 if hasattr(torch.nn.functional, 'scaled_dot_product_attention'):
     ATTENTION_MODE = 'flash'
 else:
@@ -198,7 +200,7 @@ class FeatureWiseAffine(nn.Module):
 
 class UViT(nn.Module):
 
-    def __init__(self, img_size=224, patch_size=13, in_chans=3, embed_dim=256, depth=4, num_heads=8, mlp_ratio=4.,
+    def __init__(self, img_size=224, patch_size=13, in_chans=3, embed_dim=256, depth=2, num_heads=8, mlp_ratio=4.,
                  qkv_bias=False, qk_scale=None, norm_layer=nn.LayerNorm, mlp_time_embed=False, num_classes=-1,
                  use_checkpoint=False, conv=True, skip=True):
         super().__init__()
@@ -246,8 +248,7 @@ class UViT(nn.Module):
 
         trunc_normal_(self.pos_embed, std=.02)
         self.apply(self._init_weights)
-        self.conv1 = nn.Conv2d(embed_dim,self.in_chans,3,1,1)
-
+        self.conv1 = nn.Conv2d(embed_dim, self.in_chans, 3, 1, 1)
 
     def _init_weights(self, m):
         if isinstance(m, nn.Linear):
@@ -289,11 +290,11 @@ class UViT(nn.Module):
             x_feature = self.final_layer(x_feature)
             feature.append(x_feature)
 
-        x = self.mid_block(x, timesteps)
-        x_feature = unpatchify(x, self.in_chans)
-        x_feature = self.conv1(x_feature)
-        x_feature = self.final_layer(x_feature)
-        feature.append(x_feature)
+        # x = self.mid_block(x, timesteps)
+        # x_feature = unpatchify(x, self.in_chans)
+        # x_feature = self.conv1(x_feature)
+        # x_feature = self.final_layer(x_feature)
+        # feature.append(x_feature)
 
         for blk in self.out_blocks:
             x = blk(x, timesteps)
@@ -537,9 +538,9 @@ class CD_Net(nn.Module):
         SAR_step_1000 = self.Classfy2(SAR_step_1000)
         SAR_step_2000 = self.Classfy2(SAR_step_2000)
 
-        out = self.w1 * feature_step_0+self.w2* feature_step_1000+self.w3 * feature_step_2000\
-              +self.w4 * RGB_step_0+self.w5 * RGB_step_1000+self.w6 * RGB_step_2000\
-              +self.w7 * SAR_step_0 + self.w8 * SAR_step_1000 + self.w9 * SAR_step_2000
+        out = self.w1 * feature_step_0 + self.w2 * feature_step_1000+self.w3 * feature_step_2000\
+              + self.w4 * RGB_step_0 + self.w5 * RGB_step_1000+self.w6 * RGB_step_2000\
+              + self.w7 * SAR_step_0 + self.w8 * SAR_step_1000 + self.w9 * SAR_step_2000
         output = out
 
         return output
